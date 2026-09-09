@@ -7,17 +7,19 @@ The purpose of this project is to validate legal chess moves for user-selected p
 
 ### Technical Information
 ### Files Needed
-Main.java
+* `Main.java`
+<br>
 
-PieceType.java
-Chessboard.java
-Rook.java
-Queen.java
+* `PieceType.java`
+* `Chessboard.java`
+* `Rook.java`
+* `Queen.java`
+<br>
 
-Pawn.java
-Knight.java
-Bishop.java
-King.java
+* `Pawn.java`
+* `Knight.java`
+* `Bishop.java`
+* `King.java`
 
 ----------
 
