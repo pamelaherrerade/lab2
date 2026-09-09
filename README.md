@@ -6,15 +6,14 @@
 The purpose of this project is to validate legal chess moves for user-selected pieces and coordinates without using inheritance.
 
 ### Technical Information
-
 ### Files Needed
 Main.java
----
+
 PieceType.java
 Chessboard.java
 Rook.java
 Queen.java
----
+
 Pawn.java
 Knight.java
 Bishop.java
@@ -44,10 +43,11 @@ King.java
 ----------
 
 #### Tasks
-| Team Member | Assigned Files
-| Diana | 
-| Andres |
-| Pamela |
+| Team Member | Assigned Files |
+| :--- | :---|
+| **Diana** | 
+| **Andres** |
+| **Pamela** |
 
 ----------
 
