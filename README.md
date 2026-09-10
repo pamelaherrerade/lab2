@@ -47,15 +47,15 @@ The purpose of this project is to validate legal chess moves for user-selected p
 #### Tasks
 | Team Member | Assigned Files |
 | :--- | :---|
-| **Diana** | 
-| **Andres** |
-| **Pamela** |
+| **Diana** | `Main.java` |
+| **Andres** | `Pawn.java`<br> `Knight.java`<br> `Bishop.java`<br> `King.java` |
+| **Pamela** | `PieceType.java`<br> `Chessboard.java`<br> `Rook.java`<br> `Queen.java` |
 
 ----------
 
 ## Git
 We suggest creating feature branches for the assigned tasks, for example:
-* `git checkout -b pamela/*nameofbranch`
-* `git checkout -b andres/*nameofbranch`
-* `git checkout -b diana/*nameofbranch`
+* `git checkout -b pamela/board-pieces`
+* `git checkout -b andres/pieces`
+* `git checkout -b diana/main-controller`
 Then, push each branch and open a pull request against `main` and make sure all files compile together before merging.
