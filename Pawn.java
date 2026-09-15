@@ -21,6 +21,9 @@ public class Pawn{
         this.row = row;
     }
     // Getters 
+    public String getPieceName() {
+        return this.piece_name;
+    }
 
     public String getColor() {
         return color;
