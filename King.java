@@ -14,13 +14,16 @@ public class King{
     }
 
     // Constructor with parameters
-    public King(String color, char column, int row){
+    public King(String piece_name, String color, char column, int row){
         this.piece_name = PieceType.KING.name();
         this.color = color;
         this.column = column;
         this.row = row;
     }
     // Getters 
+    public String getPieceName() {
+        return this.piece_name;
+    }
 
     public String getColor() {
         return color;

@@ -25,7 +25,11 @@ public class Queen{
         this.row = rowIn;   
     }
 
-    // Getters for color, column, and row
+    // Getters 
+    public String getPieceName() {
+        return this.piece_name;
+    }
+
     public String getColor(){
         return this.color;
     }

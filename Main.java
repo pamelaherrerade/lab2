@@ -28,28 +28,40 @@ public class Main{
 
         //1st loop is for the initial/new chesspiece
         while (start){
-            System.out.println("Please enter the following information in this format: piece,color,x_position,y_position");
-            System.out.println("e.g.: pawn,black,d,4");
+            try{
+                System.out.println("Please enter the following information in this format: piece,color,x_position,y_position");
+                System.out.println("e.g.: pawn,black,d,4");
                 String piece_info=input.nextLine();
-            String [] piece_infoParts=piece_info.split(",");
+                String [] piece_infoParts=piece_info.split(",");
 
-            pieceName=piece_infoParts[0].trim().toUpperCase(); //get piece name and convert it to upper case for ease
-            color=piece_infoParts[1].trim().toUpperCase(); //get color of the piece
+                pieceName=piece_infoParts[0].trim().toUpperCase(); //get piece name and convert it to upper case for ease
+                color=piece_infoParts[1].trim().toUpperCase(); //get color of the piece
                 verifyInput(input);
-            pieceType_name=PieceType.valueOf(pieceName); //get corresponding enum type
+                pieceType_name=PieceType.valueOf(pieceName); //get corresponding enum type
 
-            column=piece_infoParts[2].trim().toUpperCase().charAt(0); //get column and row, then check validity
-            row=Integer.parseInt(piece_infoParts[3].trim());
+                column=piece_infoParts[2].trim().toUpperCase().charAt(0); //get column and row, then check validity
+                row=Integer.parseInt(piece_infoParts[3].trim());
                 verifyPosition(input);
+            } catch(Exception e){
+                System.out.println("Invalid input, please try again!");
+                continue;
+            }
+            
             
             boolean checkingTargetPos=true; 
             while (checkingTargetPos){
-                System.out.println("Please enter the target position for the "+pieceName+" piece");
-                String targetPosition=input.nextLine();
-                String indivPositions[]=targetPosition.split(",");
-                 targetCol=indivPositions[0].trim().toUpperCase().charAt(0); //get column and row, then check validity
-                 targetRow=Integer.parseInt(indivPositions[1].trim());
-                verifyPosition(input,'a',1);
+                try{
+                    System.out.println("Please enter the target position for the "+pieceName+" piece");
+                    String targetPosition=input.nextLine();
+                    String indivPositions[]=targetPosition.split(",");
+                    targetCol=indivPositions[0].trim().toUpperCase().charAt(0); //get column and row, then check validity
+                    targetRow=Integer.parseInt(indivPositions[1].trim());
+                    verifyPosition(input,'a',1);
+                } catch(Exception e){
+                    System.out.println("Invalid input, please try again!");
+                    continue;
+                }   
+                
 
             boolean isValidMove=false;
             switch (pieceType_name) {
@@ -132,9 +144,9 @@ public class Main{
             System.out.println("Please enter a coordinate within the chessboard (a-h,1-8)");
             String target_coord=input.nextLine();
             String [] target_coords=target_coord.split(",");
-                targetCol=target_coords[0].trim().toUpperCase().charAt(0);
-                targetRow=Integer.parseInt(target_coords[1].trim());
-            withinBoard= chessboard.withinChessboard(column,row);
+            targetCol=target_coords[0].trim().toUpperCase().charAt(0);
+            targetRow=Integer.parseInt(target_coords[1].trim());
+            withinBoard= chessboard.withinChessboard(targetCol, targetRow);
         }
         return;
     }

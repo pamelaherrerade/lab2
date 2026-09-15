@@ -14,13 +14,16 @@ public class Pawn{
     }
 
     // Constructor with parameters
-    public Pawn(String color, char column, int row){
+    public Pawn(String piece_name, String color, char column, int row){
         this.piece_name = PieceType.PAWN.name();
         this.color = color;
         this.column = column;
         this.row = row;
     }
     // Getters 
+    public String getPieceName() {
+        return this.piece_name;
+    }
 
     public String getColor() {
         return color;
