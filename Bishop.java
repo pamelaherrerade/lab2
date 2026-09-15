@@ -14,8 +14,8 @@ public class Bishop{
     }
 
     // Constructor with parameters
-    public Bishop(String color, char column, int row){
-        this.piece_name = PieceType.BISHOP.name();
+    public Bishop(String piece_name, String color, char column, int row){
+        this.piece_name = piece_name;
         this.color = color;
         this.column = column;
         this.row = row;
