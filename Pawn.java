@@ -15,7 +15,7 @@ public class Pawn{
 
     // Constructor with parameters
     public Pawn(String piece_name, String color, char column, int row){
-        this.piece_name = PieceType.PAWN.name();
+        this.piece_name = piece_name;
         this.color = color;
         this.column = column;
         this.row = row;

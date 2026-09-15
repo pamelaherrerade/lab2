@@ -15,7 +15,7 @@ public class King{
 
     // Constructor with parameters
     public King(String piece_name, String color, char column, int row){
-        this.piece_name = PieceType.KING.name();
+        this.piece_name = piece_name;
         this.color = color;
         this.column = column;
         this.row = row;
